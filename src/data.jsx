@@ -21,7 +21,7 @@ export const DataComponent = () => {
 
   return (
     <div>
-      <h1>Data dari API:</h1>
+      <h1 className="text-lg text-red-500">Data dari API:</h1>
       <ul>
         {apiData.map((item) => (
           <li key={item._id}>
