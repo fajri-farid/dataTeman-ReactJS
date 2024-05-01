@@ -16,7 +16,7 @@ export const AddData = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const addNewData = async () => {
+  const handleAddNewData = async () => {
     try {
       const url = "https://v1.appbackend.io/v1/rows/4WluNE5LtmGb";
       const response = await fetch(url, {
@@ -122,7 +122,7 @@ export const AddData = () => {
         </div>
         <button
           type="button"
-          onClick={addNewData}
+          onClick={handleAddNewData}
           className="bg-indigo-700 text-white px-4 py-2 rounded-md hover:bg-indigo-800 focus:outline-none focus:bg-indigo-900 w-full"
         >
           Add
