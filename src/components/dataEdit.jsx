@@ -56,7 +56,7 @@ export const DataEdit = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+    <div className="max-w-md mx-auto bg-white p-10 md:p-6 rounded-md shadow-md">
       <Toaster />
       {/* <h1>Edit Data</h1> */}
       <form onSubmit={handleSubmit}>
