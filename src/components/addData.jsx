@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+// import { toast } from "react-toastify";
 
 export const AddData = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +38,11 @@ export const AddData = () => {
       if (response.ok) {
         const result = await response.json();
         console.log("Data added successfully:", result);
-        // Tambahkan logika lainnya di sini, misalnya memperbarui tampilan dengan data terbaru
+        toast.success("data berhasil ditambahkan");
+
+        setTimeout(() => {
+          window.location.href = "/"; // Replace with your home page URL
+        }, 1000); // 3000 milliseconds (3 seconds)
       } else {
         console.log("Failed to add data:", response.statusText);
       }
@@ -47,7 +53,7 @@ export const AddData = () => {
 
   return (
     <div>
-      <h2>Add New Data</h2>
+      <Toaster />
       <form>
         <div>
           <label>Nama:</label>

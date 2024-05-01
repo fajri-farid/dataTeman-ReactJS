@@ -1,16 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import App from "./components/App.jsx";
 import "./index.css";
-import { DataComponent } from "./data.jsx";
-import { AddData } from "./addData.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <main>
-      {/* <DataComponent /> */}
+      <App />
+      {/* <DataComponent />
       <h2>tambah data section</h2>
-      <AddData />
+      <Link to="/tambah-data">
+        <button className="border-2 border-black mt-4">tambah data</button>
+      </Link> */}
     </main>
   </React.StrictMode>
 );
