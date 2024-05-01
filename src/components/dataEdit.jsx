@@ -56,61 +56,81 @@ export const DataEdit = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
       <Toaster />
-      <h1>Edit Data</h1>
+      {/* <h1>Edit Data</h1> */}
       <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={data.name || ""}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Deksripsi:
-          <input
-            type="text"
-            name="deskripsi"
-            value={data.deskripsi || ""}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Alamat:
-          <input
-            type="text"
-            name="alamat"
-            value={data.alamat || ""}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Tanggal Lahir:
-          <input
-            type="date"
-            name="tanggal_lahir"
-            value={data.tanggal_lahir || ""}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Gambar (link):
-          <input
-            type="text"
-            name="gambar"
-            value={data.gambar || ""}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <button type="submit">Update Data</button>
+        <div className="mb-4">
+          <label htmlFor="nama" className="block text-gray-800">
+            Name:
+            <input
+              type="text"
+              name="name"
+              value={data.name || ""}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-800 focus:outline-none focus:border-blue-500"
+            />
+          </label>
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="deskripsi" className="block text-gray-800">
+            Deskripsi:
+            <input
+              type="text"
+              name="deksripsi"
+              value={data.deksripsi || ""}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-800 focus:outline-none focus:border-blue-500"
+            />
+          </label>
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="alamat" className="block text-gray-800">
+            Alamat:
+            <input
+              type="text"
+              name="alamat"
+              value={data.alamat || ""}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-800 focus:outline-none focus:border-blue-500"
+            />
+          </label>
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="tanggal_lahir" className="block text-gray-800">
+            Tanggal Lahir:
+            <input
+              type="date"
+              name="tanggal_lahir"
+              value={data.tanggal_lahir || ""}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-800 focus:outline-none focus:border-blue-500"
+            />
+          </label>
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="gambar" className="block text-gray-800">
+            Gambar (link):
+            <input
+              type="text"
+              name="gambar"
+              value={data.gambar || ""}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-800 focus:outline-none focus:border-blue-500"
+            />
+          </label>
+        </div>
+
+        <button
+          type="submit"
+          className="bg-indigo-700 text-white px-4 py-2 rounded-md hover:bg-indigo-800 focus:outline-none focus:bg-indigo-900 w-full"
+        >
+          Update Data
+        </button>
       </form>
     </div>
   );
