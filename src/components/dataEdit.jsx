@@ -48,7 +48,7 @@ export const DataEdit = () => {
       toast.success("data berhasil diupdate");
 
       setTimeout(() => {
-        window.location.href = "/";
+        window.location.href = "/home";
       }, 1000);
     } catch (error) {
       console.error("Error updating data:", error);

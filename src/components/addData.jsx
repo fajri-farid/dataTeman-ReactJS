@@ -41,7 +41,7 @@ export const AddData = () => {
         toast.success("data berhasil ditambahkan");
 
         setTimeout(() => {
-          window.location.href = "/";
+          window.location.href = "/home";
         }, 1000);
       } else {
         console.log("Failed to add data:", response.statusText);
