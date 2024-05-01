@@ -23,11 +23,10 @@ export const EditData = () => {
 
   return (
     <div>
+      {/* COMING SOON */}
       <h1>Edit Data</h1>
       <p>ID: {id}</p>
-      {/* Tampilkan data yang diperoleh dari API */}
       <p>Name: {data.name}</p>
-      {/* Tambahkan logika untuk mengedit data sesuai kebutuhan */}
     </div>
   );
 };

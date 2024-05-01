@@ -142,7 +142,7 @@ export const RegistComp = () => {
                   formErrors.password ? "border-red-500" : "border-gray-300"
                 } rounded-md py-2 px-3 text-gray-800 focus:outline-none focus:border-blue-500 pr-10`} // Add padding right for the icon
               />
-              {/* Toggle password visibility icon */}
+              
               <div
                 className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
                 onClick={togglePasswordVisibility}
@@ -154,7 +154,7 @@ export const RegistComp = () => {
               )}
             </div>
 
-            {/* Confirm Password field and validation */}
+            
             <div className="mb-4 relative">
               <label htmlFor="confirmPassword" className="block text-gray-800">
                 Konfirmasi Password:
@@ -171,7 +171,7 @@ export const RegistComp = () => {
                     : "border-gray-300"
                 } rounded-md py-2 px-3 text-gray-800 focus:outline-none focus:border-blue-500 pr-10`} // Add padding right for the icon
               />
-              {/* Toggle password visibility icon */}
+              
               <div
                 className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
                 onClick={togglePasswordVisibility}
@@ -183,7 +183,7 @@ export const RegistComp = () => {
               )}
             </div>
 
-            {/* Submit button */}
+            
             <button
               type="submit"
               className="bg-indigo-700 text-white px-4 py-2 rounded-md hover:bg-indigo-800 focus:outline-none focus:bg-indigo-900 w-full mb-10"
