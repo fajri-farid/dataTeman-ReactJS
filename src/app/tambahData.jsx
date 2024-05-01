@@ -3,7 +3,7 @@ import { AddData } from "../components/addData";
 
 export const TambahData = () => {
   return (
-    <div>
+    <div className="main">
       <h1>Masukkan Data Temanmu</h1>
       <AddData />
     </div>

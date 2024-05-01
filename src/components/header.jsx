@@ -1,7 +1,5 @@
 import React from "react";
 
-// import header from "src/style/header.module.css";
-
 export const Header = () => {
   return (
     <div className="bg-indigo-900 p-3">

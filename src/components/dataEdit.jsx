@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 export const DataEdit = () => {
   let { id } = useParams(); // Ambil nilai parameter ID dari URL
@@ -44,7 +45,11 @@ export const DataEdit = () => {
       );
       const result = await response.json();
       console.log("Data updated successfully:", result);
-      // Redirect to data list or show success message
+      toast.success("data berhasil diupdate");
+
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 1000);
     } catch (error) {
       console.error("Error updating data:", error);
     }
@@ -52,6 +57,7 @@ export const DataEdit = () => {
 
   return (
     <div>
+      <Toaster />
       <h1>Edit Data</h1>
       <form onSubmit={handleSubmit}>
         <label>
@@ -69,7 +75,7 @@ export const DataEdit = () => {
           <input
             type="text"
             name="deskripsi"
-            value={data.deksripsi || ""}
+            value={data.deskripsi || ""}
             onChange={handleChange}
           />
         </label>
@@ -98,7 +104,7 @@ export const DataEdit = () => {
           Gambar (link):
           <input
             type="text"
-            name="Gambar"
+            name="gambar"
             value={data.gambar || ""}
             onChange={handleChange}
           />

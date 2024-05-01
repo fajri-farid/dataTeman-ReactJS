@@ -41,8 +41,8 @@ export const AddData = () => {
         toast.success("data berhasil ditambahkan");
 
         setTimeout(() => {
-          window.location.href = "/"; // Replace with your home page URL
-        }, 1000); // 3000 milliseconds (3 seconds)
+          window.location.href = "/";
+        }, 1000);
       } else {
         console.log("Failed to add data:", response.statusText);
       }
