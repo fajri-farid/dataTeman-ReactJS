@@ -98,7 +98,7 @@ export const DataEdit = () => {
             value={data.tanggal_lahir || ""}
             onChange={handleChange}
           />
-        </label>{" "}
+        </label>
         <br />
         <label>
           Gambar (link):

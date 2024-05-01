@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import noneImage from "../assets/none.svg";
+import { Toaster, toast } from "react-hot-toast";
 
 export const DataComponent = () => {
   const [apiData, setApiData] = useState([]);
@@ -33,6 +34,8 @@ export const DataComponent = () => {
       const data = await res.json();
       console.log(data);
 
+      toast.success("data berhasil dihapus");
+
       setApiData((prevData) =>
         prevData.filter((dataItem) => dataItem._id !== item._id)
       );
@@ -41,9 +44,33 @@ export const DataComponent = () => {
     }
   }
 
+  function formatDate(dateString) {
+    const months = [
+      "Januari",
+      "Februari",
+      "Maret",
+      "April",
+      "Mei",
+      "Juni",
+      "Juli",
+      "Agustus",
+      "September",
+      "Oktober",
+      "November",
+      "Desember",
+    ];
+    const dateParts = dateString.split("-");
+    const year = dateParts[0];
+    const monthIndex = parseInt(dateParts[1]) - 1;
+    const day = dateParts[2];
+    const monthName = months[monthIndex];
+    return `${day} ${monthName} ${year}`;
+  }
+
   return (
     <div>
-      <h1 className="text-lg text-red-500">Data dari API:</h1>
+      <Toaster />
+      {/* <h1 className="text-lg text-red-500">Data dari API:</h1> */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {apiData.map((item) => (
           <div className="bg-white shadow-md rounded-md p-4" key={item._id}>
@@ -67,7 +94,7 @@ export const DataComponent = () => {
             <p className="text-gray-600 mb-2">Deskripsi: {item.deksripsi}</p>
             <p className="text-gray-600 mb-2">Alamat: {item.alamat}</p>
             <p className="text-gray-600 mb-2">
-              Tanggal Lahir: {item.tanggal_lahir}
+              Tanggal Lahir: {formatDate(item.tanggal_lahir)}
             </p>
 
             <div className="flex justify-between items-center">
