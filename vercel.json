@@ -1,3 +1,6 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "src/app/page.jsx" }]
+  "rewrites": [
+    { "source": "/(.*)", "destination": "src/app/page.jsx" },
+    { "source": "/home", "destination": "src/app/home.jsx" }
+  ]
 }
