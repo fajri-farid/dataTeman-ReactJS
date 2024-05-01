@@ -134,7 +134,7 @@ export const LoginComp = () => {
           <p>
             <span>Belum punya akun?</span>{" "}
             <Link className="text-blue-700" to="/register">
-              login
+              register
             </Link>
           </p>
         </div>
