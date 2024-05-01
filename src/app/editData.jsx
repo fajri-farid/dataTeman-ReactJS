@@ -1,3 +1,16 @@
+import React from "react";
+import { useParams } from "react-router-dom";
+
+export const EditData = () => {
+  let { id } = useParams(); // Ambil nilai parameter ID dari URL
+
+  return (
+    <div>
+      <h1>Edit Data</h1>
+    </div>
+  );
+};
+
 // import React, { useState, useEffect } from "react";
 
 // export const EditData = ({ match }) => {
