@@ -1,7 +1,9 @@
 {
   "routes": [
     { "src": "/", "dest": "src/app/page.jsx" },
-    { "src": "/about", "dest": "/about.html" },
-    { "src": "/contact", "dest": "/contact.html" }
+    { "src": "/home", "dest": "src/app/home.jsx" },
+    { "src": "/tambah-data", "dest": "src/app/tambahData.jsx" },
+    { "src": "/login", "dest": "src/app/auth/login.jsx" },
+    { "src": "/register", "dest": "src/app/auth/register.jsx" }
   ]
 }
