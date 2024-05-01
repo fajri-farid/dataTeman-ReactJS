@@ -4,10 +4,15 @@ import { Home } from "../app/home";
 import { EditData } from "../app/editData";
 import { Register } from "../app/auth/register";
 import { Login } from "../app/auth/login";
+import { Page } from "../app/page";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Page />,
+  },
+  {
+    path: "home",
     element: <Home />,
   },
   {

@@ -63,7 +63,7 @@ export const LoginComp = () => {
       toast.success("login berhasil");
 
       setTimeout(() => {
-        window.location.href = "/";
+        window.location.href = "/home";
       }, 1000);
     } else {
       toast.error("cek kembali email atau password anda!");
