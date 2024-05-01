@@ -52,55 +52,79 @@ export const AddData = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
       <Toaster />
       <form>
-        <div>
-          <label>Nama:</label>
+        <div className="mb-4">
+          <label htmlFor="nama" className="block text-gray-800">
+            Nama:
+          </label>
           <input
             type="text"
             name="nama"
+            id="nama"
             value={formData.nama}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-800 focus:outline-none focus:border-blue-500"
           />
         </div>
-        <div>
-          <label>Deskripsi:</label>
+        <div className="mb-4">
+          <label htmlFor="deskripsi" className="block text-gray-800">
+            Deskripsi:
+          </label>
           <input
             type="text"
             name="deskripsi"
+            id="deskripsi"
             value={formData.deskripsi}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-800 focus:outline-none focus:border-blue-500"
           />
         </div>
-        <div>
-          <label>Alamat:</label>
+        <div className="mb-4">
+          <label htmlFor="alamat" className="block text-gray-800">
+            Alamat:
+          </label>
           <input
             type="text"
             name="alamat"
+            id="alamat"
             value={formData.alamat}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-800 focus:outline-none focus:border-blue-500"
           />
         </div>
-        <div>
-          <label>Tanggal Lahir:</label>
+        <div className="mb-4">
+          <label htmlFor="tanggal_lahir" className="block text-gray-800">
+            Tanggal Lahir:
+          </label>
           <input
             type="date"
             name="tanggal_lahir"
+            id="tanggal_lahir"
             value={formData.tanggal_lahir}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-800 focus:outline-none focus:border-blue-500"
           />
         </div>
-        <div>
-          <label>Gambar (link):</label>
+        <div className="mb-4">
+          <label htmlFor="gambar" className="block text-gray-800">
+            Gambar (link):
+          </label>
           <input
             type="text"
             name="gambar"
+            id="gambar"
             value={formData.gambar}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-800 focus:outline-none focus:border-blue-500"
           />
         </div>
-        <button type="button" onClick={addNewData}>
+        <button
+          type="button"
+          onClick={addNewData}
+          className="bg-indigo-700 text-white px-4 py-2 rounded-md hover:bg-indigo-800 focus:outline-none focus:bg-indigo-900 w-full"
+        >
           Add
         </button>
       </form>
