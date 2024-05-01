@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .main {
-  @apply p-8;
+  @apply px-8 pt-4;
 }
 
 input {

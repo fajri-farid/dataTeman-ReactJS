@@ -52,7 +52,7 @@ export const AddData = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+    <div className="max-w-md mx-auto bg-white p-6 rounded-md shadow-md mb-8">
       <Toaster />
       <form>
         <div className="mb-4">

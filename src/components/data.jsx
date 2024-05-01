@@ -71,23 +71,23 @@ export const DataComponent = () => {
     <div>
       <Toaster />
       {/* <h1 className="text-lg text-red-500">Data dari API:</h1> */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
         {apiData.map((item) => (
           <div className="bg-white shadow-md rounded-md p-4" key={item._id}>
             {item.gambar ? (
               <img
                 src={item.gambar}
-                alt="Gambar"
-                className="mx-auto w-[10vw] h-auto mb-2"
+                alt="Foto Temanmu"
+                className="mx-auto w-[50vw] sm:w-[30vw] md:w-[20vw] lg:w-[15vw] h-auto mb-2"
               />
             ) : (
               <img
                 src={noneImage}
                 alt="Gambar Tidak Tersedia"
-                className="mx-auto w-[10vw] h-auto mb-2"
+                className="mx-auto w-[50vw] sm:w-[30vw] md:w-[20vw] lg:w-[15vw] h-auto mb-2"
               />
             )}
-            <h2 className="text-lg font-semibold mb-2">Nama: {item.name}</h2>
+            <h2 className="text-[1.3rem] font-semibold mb-2">{item.name}</h2>
             {/* <p className="text-gray-600 mb-2">
               Dibuat pada: {new Date(item.createdAt).toString()}
             </p> */}
@@ -97,7 +97,7 @@ export const DataComponent = () => {
               Tanggal Lahir: {formatDate(item.tanggal_lahir)}
             </p>
 
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center mt-4">
               <button
                 className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 focus:outline-none focus:bg-red-600"
                 onClick={() => handleDelete(item)}
