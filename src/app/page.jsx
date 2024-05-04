@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 
 export const Page = () => {
   return (
@@ -17,6 +18,7 @@ export const Page = () => {
           </button>
         </Link>
       </div>
+      <Analytics />
     </div>
   );
 };

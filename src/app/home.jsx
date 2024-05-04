@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { DataComponent } from "../components/data";
 import { Header } from "../components/header";
 import { AddCircle } from "iconsax-react";
+import { Analytics } from "@vercel/analytics/react";
 
 export const Home = () => {
   return (
@@ -28,6 +29,7 @@ export const Home = () => {
           <DataComponent />
         </div>
       </div>
+      <Analytics />
     </div>
   );
 };

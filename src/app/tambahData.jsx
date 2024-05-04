@@ -1,6 +1,7 @@
 import React from "react";
 import { AddData } from "../components/addData";
 import { BackHomeButton } from "../components/backHomeButton";
+import { Analytics } from "@vercel/analytics/react";
 
 export const TambahData = () => {
   return (
@@ -10,6 +11,7 @@ export const TambahData = () => {
         Masukkan Data Temanmu
       </h1>
       <AddData />
+      <Analytics />
     </div>
   );
 };

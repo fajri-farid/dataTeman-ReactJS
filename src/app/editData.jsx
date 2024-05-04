@@ -1,6 +1,7 @@
 import React from "react";
 import { DataEdit } from "../components/dataEdit";
 import { BackHomeButton } from "../components/backHomeButton";
+import { Analytics } from "@vercel/analytics/react";
 
 export const EditData = () => {
   return (
@@ -10,6 +11,7 @@ export const EditData = () => {
         Edit Data Temanmu
       </h1>
       <DataEdit />
+      <Analytics />
     </div>
   );
 };
